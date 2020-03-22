@@ -4,7 +4,7 @@ M1 and M3 have equal horizontal acceleration (d^2 * x1/dt^2) = (d^2 * x3/dt^2)
 
 M1 * (d^2 * x1/dt^2) = -F - T (in this case F should go in the negative x direction)
 M2 * (d^2 * x2/dt^2) = T
-M3 * (d^2 * x3/dt^2) = F (in this case F should go in the negative x direction again)
+M3 * (d^2 * x3/dt^2) = F 
 
 
 now to solve for netagive F, we should get M3 * (d^2 * x3/dt^2) = M3 * (d^2 * x1/dt^2)
