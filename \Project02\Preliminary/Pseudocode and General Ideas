@@ -1,0 +1,12 @@
+For the code we will have to write a function, which will first take in some time moments t0 =0, t1,...,tn and these time moments will be in seconds.
+The function will do this with the help of a scanner. 
+
+Then we will need a second function that will take in the values of the Force through a scanner. 
+
+Before all this we need to have variables, which are going to be our masses, force, etc. and we are going to put constraints on them to not exceed the restrictions in the given problem.
+
+We also need to have one last function that computes the positions of M1, M2, M3 at any given t>0 time
+
+Moreover, we need to take into consideration the friction variables and include them in our code, since they are not present in the preliminary file's solution yet
+
+These are the general ideas of what we need to have in our code and how it all should be constructed
