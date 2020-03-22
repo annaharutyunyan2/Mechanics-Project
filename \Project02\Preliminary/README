@@ -1,0 +1,19 @@
+First we know that the length of the string is x1− x2+ y and it is also a constant
+We also know that (d^2 * x1/dt^2) - (d^2 * x2/dt^2) + (d^2 * y/dt^2) = 0
+M1 and M3 have equal horizontal acceleration (d^2 * x1/dt^2) = (d^2 * x3/dt^2)
+
+M1 * (d^2 * x1/dt^2) = -F - T (in this case F should go in the negative x direction)
+M2 * (d^2 * x2/dt^2) = T
+M3 * (d^2 * x3/dt^2) = F (in this case F should go in the negative x direction again)
+
+
+now to solve for netagive F, we should get M3 * (d^2 * x3/dt^2) = M3 * (d^2 * x1/dt^2)
+
+T = M2 * (d^2 * x2/dt^2) = - (M1 * (d^2 * x1/dt^2) + F) = -(M1 + M3) * (d^2 * x1/dt^2), therefore, (d^2 * x2/dt^2) = ((M1 + M3)/M2)*(d^2 * x1/dt^2)
+
+(d^2 * y/dt^2) = g - (T/M3) = g - (M2/M3) * (d^2 * x2/dt^2) = g + ((M1 + M3)/M3) * (d^2 * x1/dt^2)
+
+now, from (d^2 * x1/dt^2) - (d^2 * x2/dt^2) + (d^2 * y/dt^2) = 0 equation we get that
+0 = (d^2 * x1/dt^2) + ((M1 + M3)/M2) * (d^2 * x1/dt^2) + g + ((M1 + M3)/M3) * (d^2 * x1/dt^2)
+
+(d^2 * x1/dt^2) = -g/ (2 + ((M1 + M3)/M2) + (M1/M3)) = (-M2*M3*g)/(2*M2*M3 + M1*M3 + M1*M2 + M3^2) 
