@@ -1,0 +1,60 @@
+import java.util.*;
+
+public class Project2 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Import the mass of M1. It should be between 0 and 10 kg ");
+        double M1_1 = sc.nextDouble();
+        System.out.print("Import the mass of M2. It should be between 0 and 10 kg ");
+        double M2_1 = sc.nextDouble();
+        System.out.print("Import the mass of M3. It should be between 0 and 10 kg ");
+        double M3_1 = sc.nextDouble();
+        acceleration(M1_1, M2_1, M3_1);
+        System.out.print("Import the acceleration of M1 ");
+        double a1_1 = sc.nextDouble();
+        System.out.print("Import the acceleration of M2 ");
+        double a2_1 = sc.nextDouble();
+        System.out.print("Import the acceleration of M3 ");
+        double a3_1 = sc.nextDouble();
+        System.out.print("Import a point in time t ");
+        double t1_1 = sc.nextDouble();
+        velocity(a1_1, a2_1, a3_1, t1_1);
+        System.out.print("Import another point in time t ");
+        double t2_1 = sc.nextDouble();
+        position(a1_1, a2_1, a3_1, 0, 0, 0, t2_1 );
+
+    }
+
+    public static void acceleration(double M1, double M2, double M3) {
+
+        double a1 = (-1 * (M2 * M3 * 10) / (2 * M2 * M3 + M1 * M2 + M1 * M3 + M3 * M3));
+        double a2 = (M3 * (a1 - 10) / (M3 + M2));
+        double a3 = a2;
+        System.out.println("Acceleration for M1 is " + a1);
+        System.out.println("Acceleration for M2 is " + a2);
+        System.out.println("Acceleration for M3 is " + a3);
+    }
+
+    public static void velocity(double a1, double a2, double a3, double t) {
+
+        double v0 = 0;
+        double v1 = v0 + a1 * t;
+        double v2 = v0 + a2 * t;
+        double v3 = v0 + a3 * t;
+        System.out.println("The velocity of M1, when t = " + t + " is " + v1);
+        System.out.println("The velocity of M2, when t = " + t + " is " + v2);
+        System.out.println("The velocity of M3, when t = " + t + " is " + v3);
+
+    }
+
+    public static void position(double a1, double a2, double a3, double s10, double s20, double s30, double t) {
+
+        double x1 = s10 + (a1 * Math.pow(t, 2)) / 2;
+        double x2 = s20 + (a2 * Math.pow(t, 2)) / 2;
+        double x3 = s30 + (a3 * Math.pow(t, 2)) / 2;
+        System.out.println("M1's position is " + x1);
+        System.out.println("M2's position is " + x2);
+        System.out.println("M3's position is " + x3);
+    }
+}
